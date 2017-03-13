@@ -11,19 +11,19 @@ public class Main {
         int imin = 25;
 
         for (int i = 0; i < array.length; i++){
-    if (max < array[i]){
-             max  = array[i];
-             imax = i;
-    }
-    if (min > array[i]){
-        min = array[i];
-        imin = i;
-    }
-    int temp = array[imax];
-    array[imax] = array[imin];
-    array[imin] = temp;
+            if (max < array[i]){
+                max  = array[i];
+                imax = i;
+            }
+            if (min > array[i]){
+                min = array[i];
+                imin = i;
+            }
+            int temp = array[imax];
+            array[imax] = array[imin];
+            array[imin] = temp;
 
-}
+        }
 
     }
 
@@ -49,7 +49,7 @@ public class Main {
         System.out.println();
 
         for (int i = 0; i < array.length; i++){
-                trade(array[i]);
+            trade(array[i]);
         }
 
 /*
