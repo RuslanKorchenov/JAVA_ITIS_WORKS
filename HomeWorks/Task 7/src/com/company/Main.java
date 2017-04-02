@@ -30,27 +30,19 @@ public class Main {
         for (int i = 0; i < humans.length; i++) {
             System.out.println(humans[i].getAge() + " " + humans[i].getName());
         }
-    }
- /*   public static void maxAgeHuman(Human humans[]) {
 
-        Human maxAgeHuman = humans[0];
-        for (int i = 0; i < humans.length; i++){
-            if (maxAgeHuman.getAge() < humans[i].getAge()) {
-                maxAgeHuman = humans[i];
+        System.out.println(maxHuman(humans));
+    }
+
+    public static Human maxHuman(Human humans[]) {
+        Human min = humans[0];
+        for (int i = 1; i < humans.length; i++) {
+            if (min.getAge() < humans[i].getAge()) {
+                min = humans[i];
             }
         }
-        System.out.println("Max age = " + maxAgeHuman.getName());
-    }
-*/
-    public static void maxAgeHuman(Human humans[]) {
 
-        String name = humans[0].getName();
-        for (int i = 0; i < humans.length; i++){
-            if (humans[i].getAge() < humans[i+1].getAge()) {
-                name = humans[i].getName();
-            }
-        }
-        System.out.println("Max age = " + name);
+        return min;
     }
 
 }

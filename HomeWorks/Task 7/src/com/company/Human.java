@@ -34,4 +34,9 @@ public class Human {
     public int getAge() {
         return age;
     }
+
+    public String toString() {
+        return this.name + " " + this.age;
+    }
+
 }

@@ -4,29 +4,26 @@ import java.util.Random;
 
 public class Main {
 
-    public static void trade(int array[]) {
-        int max = 0;
-        int imax = 0;
-        int min = 25;
-        int imin = 25;
-
-        for (int i = 0; i < array.length; i++){
-            if (max < array[i]){
-                max  = array[i];
-                imax = i;
-            }
-            if (min > array[i]){
-                min = array[i];
-                imin = i;
-            }
-            int temp = array[imax];
-            array[imax] = array[imin];
-            array[imin] = temp;
-
+public static void trade(int array[]){
+    int max = 0;
+    int min = 25;
+    int iMax = -1;
+    int iMin = -1;
+    for (int i = 0; i < array.length; i++){
+        if (array[i] > max) {
+            max = array[i];
+            iMax = i;
         }
-
+        if (array[i] < min){
+            min = array[i];
+            iMin = i;
+        }
     }
+    int temp = array[iMin];
+    array[iMin] = array[iMax];
+    array[iMax] = temp;
 
+}
     public static void main(String[] args) {
         int array[][];
 
@@ -52,13 +49,6 @@ public class Main {
             trade(array[i]);
         }
 
-/*
-        for(int i = 0; i < array.length; i++){
-            for (int j = 0; j < array.length; j++){
-                if (array )
-            }
-        }
-*/
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[0].length; j++) {
                 System.out.print(array[i][j] + " ");
@@ -66,4 +56,5 @@ public class Main {
             System.out.println();
         }
     }
+
 }
